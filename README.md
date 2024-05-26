@@ -3,6 +3,8 @@ This is a work done for module 450.
 
 # Name Suggestion Application
 
+[![CI](https://github.com/Furmuly/Module-450/actions/workflows/ci.yml/badge.svg)](https://github.com/Furmuly/Module-450/actions/workflows/ci.yml)
+
 ## Project Overview
 
 This project is a simple name suggestion site where users can enter one or two names or a set of alphabets, and it provides five new names that contain those alphabets.
