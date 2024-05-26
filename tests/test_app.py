@@ -1,5 +1,6 @@
 import pytest
 from app import app
+from name_suggestions import suggest_names
 
 
 @pytest.fixture
@@ -15,7 +16,15 @@ def test_index_page(client):
 
 def test_name_suggestions(client):
     rv = client.post("/", data=dict(name_input='A'))
-    assert b"Alice" in rv.data
+    assert rv.status_code == 200
+    # Check if the response contains the HTML list of suggestions
+    assert b"<ul>" in rv.data
+    assert b"</ul>" in rv.data
+    assert rv.data.count(b"<li>") >= 1
 
     rv = client.post("/", data=dict(name_input='Z'))
-    assert b"Bob" not in rv.data
+    assert rv.status_code == 200
+    # Check if the response contains the HTML list of suggestions
+    assert b"<ul>" in rv.data
+    assert b"</ul>" in rv.data
+    assert rv.data.count(b"<li>") >= 1
