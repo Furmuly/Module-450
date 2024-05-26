@@ -1,24 +1,43 @@
 # Module-450-
 This is a work done for module 450.
 
-# Name Suggestion Site
+# Name Suggestion Application
 
-A simple name suggestion site using Python.
+## Project Overview
+
+This project is a simple name suggestion site where users can enter one or two names or a set of alphabets, and it provides five new names that contain those alphabets.
+
+## Requirements
+
+- Python 3.12
+- Flask
+- pytest
+- flake8
 
 ## Setup Instructions
 
-1. Clone the repository.
-2. Install dependencies using `pip install -r requirements.txt`.
-3. Run the application using `python app/main.py`.
-4. Run tests using `python -m unittest discover tests`.
+1. **Clone the repository:**
+   git clone https://github.com/Furmuly/Module-450.git
+   cd Module-450
+   
+2. Create and activate a virtual environment:
+   python -m venv venv
+   .\venv\Scripts\Activate.ps1
 
-## Running the Application
+3. Install dependencies:
+pip install -r requirements.txt
 
-The application runs a Flask server. You can test it using a tool like Postman or curl.
+# Running the Application
+Start the Flask application:
+python app.py
 
-## Running Tests
+# Running Tests
+python -m pytest
 
-To run the tests, execute:
-```sh
-python -m unittest discover tests
+# Code Quality Check
+Run Flake8 for code style check: flake8 . > flake8_report.txt
+
+
+
+
 
