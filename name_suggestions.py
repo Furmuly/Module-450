@@ -2,7 +2,7 @@ import random
 
 
 def suggest_names(input_string):
-    names_database = ["Alice", "Bob", "Charlie", "David", "Eve", "Frank", "Grace", "Hannah", "Ivy", "Jack"]
+    names_database = ["Alice", "Bob", "Charlie", "David", "Eve", "Frank", "Grace", "Hannah", "Ivy", "Jack", "Nabil"]
     suggestions = [name for name in names_database if all(char in name for char in input_string)]
     return suggestions[:3]
 
